@@ -32,7 +32,6 @@ Example of variable definition and usage:
 ```
 INPUTDIR=/path/to/file           #define a path to a file into a variable
 echo $INPUTDIR                   #print the variable value
-cp $INPUTDIR/file.txt .          #copy file.txt from variable value to current folder
 ```
 
 ## Metacentrum jobs and frontend
@@ -48,3 +47,14 @@ For now we can just try opening an interactive session and work inside of it.
 qsub -I -l select=ncpus=4:mem=16gb -l walltime=4:00:00
 ```
 This will `qsub` submit us into a queue in `-I` interactive mode and request `-l select=ncpus=4:mem=16gb` 4CPUs and 16GB of RAM. Further, we specify that the maximum runtime is `-l walltime=4:00:00` 4 hours. 
+
+If we want to check our currently running jobs, we can use
+```
+qstat -u [your_username]
+```
+And when we are done, we can exit the interactive session using
+```
+exit
+```
+
+##
