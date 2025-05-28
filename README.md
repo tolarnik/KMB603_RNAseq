@@ -186,3 +186,22 @@ cp -r mus_map_results $OUTPUTDIR/
 # clean the SCRATCH directory
 clean_scratch
 ```
+
+## Viewing the BAM results
+After you obtain .bam files, you can inspect the results in any genome browser you want. Typically, people use Geneious, IGV or similar. For some of there tools, you need to provide bam-index (.bai) file in addition to the .bam file. In case you need the index, you can generate it by using samtools.
+
+Samtools on metacentrum. Make sure to be in an interactive job again/still. If you are getting errors when loading samtools, make sure to unload previous packages that we used, such as `fastqc`.
+```
+#load the module
+module load samtools
+
+#go to the folder with bam
+cd [folder_with_bam_files]
+
+#sort the bam file and create a new, sorted file
+samtools sort [your_bam].bam > [your_bam].sorted.bam
+
+#create an index
+samtool index [your_bam].sorted.bam
+```
+These two files - sorted BAM and its BAI index should be sufficient to inspect the BAM in any visualisation tool that supports BAMs (plus, of course, you will need the refrence used for mapping). In some programs you might get away with just using the default BAM we got from mapper.
