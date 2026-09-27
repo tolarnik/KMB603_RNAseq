@@ -1,5 +1,5 @@
 # KMB/930 RNAseq analysis 2026
-supplementary materials for KMB/603 RNAseq analysis course
+supplementary materials for KMB/930 RNAseq analysis course
 
 ## Basic linux commands
 These are some basic linux commands that we will use to navigate in our Metacentrum segment.
