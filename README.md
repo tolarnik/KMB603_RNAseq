@@ -1,4 +1,4 @@
-# KMB/603 RNAseq analysis 2025
+# KMB/930 RNAseq analysis 2026
 supplementary materials for KMB/603 RNAseq analysis course
 
 ## Basic linux commands
